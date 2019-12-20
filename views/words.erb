@@ -3,10 +3,10 @@
 <h3 class="titles">Available Words</h3>
 <h4><a href="/albums/new">Add a new album</a></h4>
 
-<% if @albums.any? %>
+<% if @@words.any? %>
 <ul>
-  <% @albums.each do |album| %>
-  <h4><a href="/albums/<%= word.id %>"><%= word.name %></a></h4>
+  <% @@words.each do |album| %>
+  <h4><a href="/words/<%= word.id %>"><%= word.name %></a></h4>
   <li>Definition: <%= word.definition %></li>
   <% end %>
 </ul>

@@ -1,6 +1,6 @@
 class Word
   # attr_reader
-  @@word = {}
+  @@words = {}
   @@total_rows = 0
 
   def initialize(attributes)
