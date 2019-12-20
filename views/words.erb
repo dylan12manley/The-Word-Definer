@@ -7,7 +7,7 @@
 <ul>
   <% @words.each do |word| %>
   <h4><a href="/words/<%= word.id %>"><%= word.name %></a></h4>
-  <li>Definition: <%= word.definition %></li>
+  <li>Definition: <%= word.definitions %></li>
   <% end %>
 </ul>
 <% else %>
