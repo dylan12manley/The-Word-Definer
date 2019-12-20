@@ -4,10 +4,10 @@ class Word
   @@words = {}
   @@total_rows = 0
 
-  def initialize(id, name, pronunciation)
-    @id = id || @@total_rows += 1
+  def initialize(name, pronunciation, id)
     @name = name
     @pronunciation = pronunciation
+    @id = id || @@total_rows += 1
   end
 
   def update(name, pronunciation)
@@ -23,6 +23,10 @@ class Word
     @@words.values()
   end
 
+  def self.find(id)
+    @@words[id]
+  end
+
   def delete
     @@words.delete(self.id)
   end
@@ -32,5 +36,8 @@ class Word
     @@words = {}
   end
 
+  def definitions
+    Definition.find_by_word(self.id)
+  end
 
 end
