@@ -6,13 +6,15 @@ describe '#Word' do
   before(:each) do
     Word.clear
   end
-  # describe('#==') do
-  #   it("is the same word if it has the same attributes as another word") do
-  #       word = Word.new("Blue", nil, 1)
-  #       word2 = Word.new("Blue", nil, 1)
-  #       expect(word).to(eq(word2))
-  # end
-  # end
+
+  describe('#==') do
+    it("is the same word if it has the same attributes as another word") do
+        word = Word.new("Blue", nil, 1)
+        word2 = Word.new("Blue", nil, 1)
+        expect(word).to(eq(word2))
+  end
+  end
+
   describe('.all') do
     it('returns an empty array when there are no words') do
       expect(Word.all).to(eq([]))
