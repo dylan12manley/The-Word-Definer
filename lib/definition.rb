@@ -47,6 +47,10 @@ class Definition
     definitions
   end
 
+  def word
+    Word.find(self.word_id)
+  end
+
   def definitions
     Definition.find_by_word(self.id)
   end
