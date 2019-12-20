@@ -46,6 +46,10 @@ class Definition
     end
     definitions
   end
+  
+  def self.find(id)
+    @@definitions[id]
+  end
 
   def word
     Word.find(self.word_id)

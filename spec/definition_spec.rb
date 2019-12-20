@@ -94,6 +94,7 @@ describe '#Definition' do
       expect(definition.word()).to(eq(@word))
     end
   end
+
   describe('.find') do
     it("finds a definition by id") do
       definition = Definition.new("Giant Steps", @word.id, nil)
