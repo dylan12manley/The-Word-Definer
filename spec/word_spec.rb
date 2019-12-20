@@ -1,5 +1,6 @@
 require 'rspec'
 require 'word'
+require 'definition'
 
 describe '#Word' do
 
@@ -53,5 +54,35 @@ describe '#Word' do
       expect(Word.all).to(eq([]))
     end
   end
+
+  describe('#update') do
+    it("updates an word by id") do
+      word = Word.new("Giant Steps",nil, nil)
+      word.save()
+      word.update("A Love Supreme", nil)
+      expect(word.name).to(eq("A Love Supreme"))
+    end
+  end
+
+  describe('#add_properties') do
+    it("Add the pronunciation of the word") do
+      word = Word.new("Dark", "Dhaaar-ckh", nil)
+      word.save()
+      expect(word.pronunciation).to(eq("Dhaaar-ckh"))
+    end
+  end
+
+  describe('#definitions') do                 #returns songs from an album
+    it("returns an word's definitions") do
+      word = Definition.new("Giant", nil, nil)
+      word.save()
+      definition = Definition.new("Bigger than normal", word.id, nil)
+      definition.save()
+      definition2 = Definition.new("A big person", word.id, nil)
+      definition2.save()
+      expect(word.definitions).to(eq([definition, definition2]))
+    end
+  end
+
 
 end
