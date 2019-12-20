@@ -1,6 +1,6 @@
 <h2>Word: <%= @word.name %></h2>
 
-<h3>Album Definition</h3>
+<h3>Definition</h3>
 
   <% if @word.definitions %>
     <ul>
@@ -22,7 +22,10 @@
   <button type="submit" class="danger ">Add definition</button>
 </form>
 
+<!-- <form action="/words" method="get">
+  <button type="submit" name="clear_definitions">Clear All Definitions</button>
+</form> -->
 
 
-<p><a href="/words/<%= @word.id %>/edit">Edit album</a></p>
-<p><a href="/albums">Return to album list</a></p>
+<p><a href="/words/<%= @word.id %>/edit">Edit word</a></p>
+<p><a href="/words">Return to word list</a></p>

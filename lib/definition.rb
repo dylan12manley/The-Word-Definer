@@ -23,9 +23,8 @@ class Definition
     @@definitions[self.id] = Definition.new(self.name, self.word_id, self.id)
   end
 
-  def update(definition, song_id)
-    self.definition = definition
-    self.word_id = word_id
+  def update(name)
+    self.name = name
     @@definitions[self.id] = Definition.new(self.name, self.word_id, self.id)
   end
 
@@ -46,7 +45,7 @@ class Definition
     end
     definitions
   end
-  
+
   def self.find(id)
     @@definitions[id]
   end

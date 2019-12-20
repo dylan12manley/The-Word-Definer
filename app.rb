@@ -38,8 +38,13 @@ get ('/words/:id') do
 end
 
 get('/words/:id/edit') do
+  if params["clear_definitions"]
+    @definitions = Definition.clear()
+    # erb(:/words/:id)
+  else
   @word = Word.find(params[:id].to_i())
   erb(:edit_word)
+end
 end
 
 patch('/words/:id') do
