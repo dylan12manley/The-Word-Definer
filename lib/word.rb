@@ -10,6 +10,10 @@ class Word
     @id = id || @@total_rows += 1
   end
 
+  def ==(word_to_compare)
+    self.name() == word_to_compare.name()
+  end
+
   def update(name, pronunciation)
     @name = name
     @pronunciation = pronunciation

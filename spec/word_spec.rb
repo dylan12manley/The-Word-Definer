@@ -13,8 +13,14 @@ describe '#Word' do
   #       expect(word).to(eq(word2))
   # end
   # end
+  describe('.all') do
+    it('returns an empty array when there are no words') do
+      expect(Word.all).to(eq([]))
+    end
+  end
+
   describe('#save') do
-    it('saves an word') do
+    it('saves a word') do
       word = Word.new("Giant Steps", nil, nil)
       word.save()
       word2 = Word.new("Blue", nil, nil)
@@ -23,11 +29,16 @@ describe '#Word' do
     end
   end
 
-  describe('.all') do
-    it('returns an empty array when there are no words') do
-    expect(Album.all).to(eq([]))
-  end
-  end
 
+  describe('#delete') do
+      it("deletes an word by id") do
+        word = Word.new("Giant Steps", nil, nil)
+        word.save()
+        word2 = Word.new("Blue", nil, nil)
+        word2.save()
+        word.delete()
+        expect(Word.all).to(eq([word2]))
+      end
+    end
 
 end
