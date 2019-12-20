@@ -1,0 +1,27 @@
+<h2 class="titles">The Word Definer</h2>
+<h5 class="titles">"It's for the children."</h5>
+
+<h3 class="titles">Available Words</h3>
+<h4><a href="/albums/new">Add a new album</a></h4>
+
+<% if @albums.any? %>
+<ul>
+  <% @albums.each do |album| %>
+  <h4><a href="/albums/<%= word.id %>"><%= word.name %></a></h4>
+  <li>Definition: <%= word.definition %></li>
+  <% end %>
+</ul>
+<% else %>
+<p>There are currently no words to display.</p>
+<% end %>
+
+
+<!-- <form action="/words" method="get">
+  <input name="clear_inputs" type="hidden" value="clear">
+  <button type="submit" name="clear">Clear All Words</button>
+</form> -->
+
+<!-- <form action="/words" method="get">
+  <input name="sort_list" type="hidden" value="search">
+  <button type="submit">Sort List</button>
+</form> -->

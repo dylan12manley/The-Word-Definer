@@ -4,6 +4,7 @@ class Word
   @@total_rows = 0
 
   def initialize(attributes)
+    @name = attributes.fetch(:name)
     @definition = attributes.fetch(:definition)
     @id = attributes.fetch(:id) || @@total_rows += 1
   end
@@ -13,8 +14,10 @@ class Word
   end
 
   def save(attributes)
-    @@word[self.id] = Word.new(self.definition, self.id)
+    @@word[self.id] = Word.new(attributes)
+    @name = attributes.fetch(:name)
+    @definition = attributes.fetch(:definition)
+    @id
   end
-
 
 end
