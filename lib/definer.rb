@@ -13,11 +13,23 @@ class Word
     @definition = attributes.fetch(:definition)
   end
 
-  def save(attributes)
-    @@word[self.id] = Word.new(attributes)
-    @name = attributes.fetch(:name)
-    @definition = attributes.fetch(:definition)
-    @id
+  def save
+    @@words[self.id] = Word.new(attributes)
+    @name = name
+    @definition = definition
+  end
+
+  def delete
+    @@words.delete(self.id)
+  end
+
+  def self.clear
+    @@total_rows = 0
+    @@words = {}
+  end
+
+  def self.all
+    @@words.values()
   end
 
 end
