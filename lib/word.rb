@@ -1,5 +1,5 @@
 class Word
-  attr_accessor :id, :name, :pronunciation
+  attr_accessor :name, :pronunciation, :id
 
   @@words = {}
   @@total_rows = 0
