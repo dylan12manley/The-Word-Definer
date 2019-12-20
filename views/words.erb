@@ -8,7 +8,6 @@
   <% @words.each do |word| %>
   <h4><a href="/words/<%= word.id %>"><%= word.name %></a></h4>
   <li>Pronounced As: <%= word.pronunciation %></li>
-
   <% end %>
 </ul>
 <% else %>
