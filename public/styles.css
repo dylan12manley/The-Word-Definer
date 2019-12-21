@@ -7,12 +7,10 @@ object-position: center;
 
 body{
   background-color: aquamarine;
-  text-align: right;
+  text-align: center;
   background-image: url("https://miro.medium.com/max/6252/0*JMvNb33fxIlD3LlA");
   background-repeat: no-repeat;
   background-position: bottom;
-
-
 }
 
 .titles{
