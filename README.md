@@ -17,15 +17,9 @@
 
 ## Setup Instructions
 
-* Clone this repository to desktop
-* Go into the repository directory in the terminal
-* Run "gem install bundler" in the terminal
-* Run "bundle install" in the terminal
-* Run "heroku login" in the terminal and follow the instructions to login
-* Run "heroku create" in the terminal
-* Run "git push heroku master" in the terminal
-* Run "heroku open" in the terminal
-
+* Open your browser
+* Enter https://arcane-basin-75518.herokuapp.com/words in the url
+* Go to hosted app!
 
 
 ### Technologies Used
