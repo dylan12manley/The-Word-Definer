@@ -1,0 +1,22 @@
+button {
+color: black;
+object-position: center;
+
+
+}
+
+body{
+  background-color: aquamarine;
+  text-align: right;
+  background-image: url("https://miro.medium.com/max/6252/0*JMvNb33fxIlD3LlA");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+
+}
+
+.titles{
+  font-family: 'Freckle Face', cursive;
+  font-size: 2em;
+  text-align: center;
+}
