@@ -6,11 +6,13 @@ object-position: center;
 body{
   background-color: Red;
   font-family: 'PT Sans', sans-serif;
+  color: green;
   text-align: center;
   background-image: url('https://live.staticflickr.com/7859/46798127044_f3bb685b49_b.jpg');
   background-repeat: no-repeat;
   background-position: bottom;
-  padding: 20px;
+  padding: 40px;
+  height: 500px;
 }
 .red{
   background-color: red;
