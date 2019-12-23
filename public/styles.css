@@ -2,6 +2,7 @@ button {
   color: black;
   object-position: center;
 }
+
 .titles{
   font-weight: 700;
   color: #FFFFFF;
@@ -10,7 +11,7 @@ button {
   color: #FFFFFF;
   background: #333333;
 }
-}
+
 body{
   font-weight: 500;
   background-color: Red;
