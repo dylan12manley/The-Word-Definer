@@ -38,7 +38,7 @@ get ('/words/:id') do
 end
 
 get('/words/:id/edit') do
-  if params["clear_definitions"]
+  if params[:clear_definitions]
     @definitions = Definition.clear()
     # erb(:/words/:id)
   else
@@ -68,7 +68,7 @@ end
 
 post('/words/:id/definitions') do
   @word = Word.find(params[:id].to_i())
-  definition = Definition.new(params[:definition_name], @word.id, nil)
+  definition = Definition.new(params[:definition_in], @word.id, nil)
   definition.save()
   erb(:word)
 end
