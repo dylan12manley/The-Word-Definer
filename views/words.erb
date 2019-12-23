@@ -4,7 +4,7 @@
 <h4><a href="/words/new">Add a new word</a></h4>
 
 <% if @words.any? %>
-<ul>
+<ul style="list-style-type:none;">
   <% @words.each do |word| %>
   <h4><a href="/words/<%= word.id %>"><%= word.name %></a></h4>
   <li>Pronounced As: <%= word.pronunciation %></li>

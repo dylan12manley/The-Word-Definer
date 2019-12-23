@@ -1,20 +1,20 @@
 button {
 color: black;
 object-position: center;
-
-
 }
 
 body{
   background-color: aquamarine;
+  font-family: 'PT Sans', sans-serif;
   text-align: center;
   background-image: url("https://miro.medium.com/max/6252/0*JMvNb33fxIlD3LlA");
   background-repeat: no-repeat;
   background-position: bottom;
+  padding: 20px;
+
 }
 
-.titles{
-  font-family: 'Freckle Face', cursive;
-  font-size: 2em;
-  text-align: center;
+.inputs{
+  width: 300px;
+  margin: auto, auto;
 }
