@@ -14,21 +14,21 @@ button {
 
 body{
   font-weight: 500;
-  background-color: Red;
-  font-family: 'PT Sans', sans-serif;
-  color: green;
   text-align: center;
+  font-family: 'PT Sans', sans-serif;
+  /* background-color: Red;
+  color: green;
   background-image: url('https://live.staticflickr.com/7859/46798127044_f3bb685b49_b.jpg');
   background-repeat: no-repeat;
-  background-position: bottom;
-  padding: 40px;
+  background-position: bottom; */
   height: 500px;
+  padding: 40px;
 }
-.red{
+/* .red{
   text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
   background-color: red;
   width: 60%;
-}
+} */
 
 .inputs{
   width: 300px;
