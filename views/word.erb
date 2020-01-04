@@ -1,30 +1,30 @@
-<h2>Word: <%= @word.name %></h2>
+<h2 class="titles2">Word: <%= @word.name %></h2>
 
-<h3>Definition</h3>
+<h3 class="titles2">Definition</h3>
 
-
+<div class="titles2">
   <% if @word.definitions %>
-    <ul>
-      <% @word.definitions.each do |definition| %>
-        <li><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.name %></a></li>
-      <% end %>
-    </ul>
+  <ul>
+    <% @word.definitions.each do |definition| %>
+    <li><a href="/words/<%= @word.id %>/definitions/<%= definition.id %>"><%= definition.name %></a></li>
+    <% end %>
+  </ul>
   <% else %>
-    <p>There are no definitions listed for this word yet.</p>
+  <p>There are no definitions listed for this word yet.</p>
   <% end %>
+</div>
 
-<form action="/words/<%= @word.id %>/definitions" method="post">
-  <div class="form-group">
-    <label for="definition_name">Add a definition:</label>
-    <input id="definition_name" name="definition_name" class="form-scontrol inputs" type="text">
-  </div>
-  <button type="submit" class="danger ">Add definition</button>
-</form>
-
-<!-- <form action="/words" method="get">
-  <button type="submit" name="clear_definitions">Clear All Definitions</button>
-</form> -->s
-
-
-<p><a href="/words/<%= @word.id %>/edit">Edit word</a></p>
-<p><a href="/words">Return to word list</a></p>
+<div class="titles2">
+  <form action="/words/<%= @word.id %>/definitions" method="post">
+    <div class="form-group">
+      <label for="definition_name">Add a definition:</label>
+      <input id="definition_name" name="definition_name" class="form-scontrol inputs" type="text">
+    </div>
+    <button type="submit" class="danger ">Add definition</button>
+  </form>
+  <!-- <form action="/words" method="get">
+    <button type="submit" name="clear_definitions">Clear All Definitions</button>
+  </form> -->s
+  <p><a href="/words/<%= @word.id %>/edit">Edit word</a></p>
+  <p><a href="/words">Return to word list</a></p>
+</div>
