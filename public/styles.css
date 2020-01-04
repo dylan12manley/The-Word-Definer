@@ -1,16 +1,16 @@
-button {
-  color: black;
-  object-position: center;
-}
-
-.titles{
+.styles{
   font-weight: 700;
   text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
   color: #FFFFFF;
   background: tan;
+  padding-bottom: 20px;
+  width: 75vw;
+  text-align: center;
+  border-radius: 5%;
 }
 
 body{
+  height: 120vw;
   font-weight: 500;
   text-align: center;
   font-family: 'PT Sans', sans-serif;
@@ -18,16 +18,51 @@ body{
   background-image: url('https://www.nasa.gov/sites/default/files/thumbnails/image/iss045e106651a.jpg');
   background-repeat: no-repeat;
   background-position: bottom;
-  height: 500px;
   padding: 40px;
 }
-.red{
-  text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-  background-color: tan;
-  width: 60%;
+
+.new_object_page {
+  padding: 2vw;
 }
 
+.homepage {
+  padding-top: 1.5vw;
+}
+a{
+  font-weight: 600;
+}
+a:link{
+  color: #2C497F;
+}
+a:visited {
+  color: #3D2B56;
+}
+
+.align-left{
+  text-align: left;
+}
+button {
+	box-shadow:inset 0px 1px 0px 0px #f5978e;
+	background:linear-gradient(to bottom, #69110a 5%, #d12414 100%);
+	background-color:#69110a;
+	border-radius:40%;
+	border:1px double #d1b543;
+	display:inline-block;
+	cursor:pointer;
+	color:#ebeda5;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+  margin-top: .5vw;
+}
+
+button:hover {
+	background:linear-gradient(to bottom, #d12414 5%, #69110a 100%);
+	background-color:#d12414;
+  border:2px double #d1b543;
+}
+
+
 .inputs{
-  width: 300px;
-  margin: auto, auto;
+  width: 40vw;
+  margin: 0, auto;
 }
