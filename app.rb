@@ -13,6 +13,8 @@ end
 get('/words') do
   if params["clear"]
     @words = Word.clear()
+  # elsif params["clear_definitions"]
+  #   @definitions = Definition.clear()
   else
     @words = Word.all
   end
