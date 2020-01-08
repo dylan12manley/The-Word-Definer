@@ -13,13 +13,21 @@ describe('create a word path', {:type => :feature}) do
   end
 end
 
-# describe('create a definition path', {:type => :feature}) do
-#   it('creates a word with a definition and then goes to the word page') do
-#     word = Word.new("Kitty", nil, nil,)
-#     word.save
-#     visit("/words/#{word.id}")
-#     fill_in('definition_name', :with => 'issa cat')
-#     click_on('Add definition')
-#     expect(page).to have_content('issa cat')
-#   end
-# end
+describe('clears word paths', {:type => :feature}) do
+  it('clears words and goes to that word page') do
+    visit('/words')
+    click_on('Clear All Words')
+    expect(page).to have_content('There are currently no words to display.')
+  end
+end
+
+describe('create a definition path', {:type => :feature}) do
+  it('creates a word with a definition and then goes to the word page') do
+    word = Word.new("Kitty", nil, nil,)
+    word.save
+    visit("/words/#{word.id}")
+    fill_in('definition_name', :with => 'issa cat')
+    click_on('Add definition')
+    expect(page).to have_content('issa cat')
+  end
+end
