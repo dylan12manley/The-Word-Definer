@@ -54,8 +54,8 @@ class Definition
     Word.find(self.word_id)
   end
 
-  # def definitions
-  #   Definition.find_by_word(self.id)
-  # end
+  def definitions
+    Definition.find_by_word(self.id)
+  end
 
 end
