@@ -47,13 +47,6 @@ describe '#Definition' do
     end
   end
 
-# describe('#update') do
-#   it("updates a definition by id") do
-#     definition = Definition.new("Naima", @word.id, nil)
-#     definition.save()
-#     definition.update("Mr. P.C.", @word.id)
-#     expect(definition.definitions).to(eq("Mr. P.C."))
-#   end
 # end
   # describe('#update') do
   #   it("updates an definition by id") do

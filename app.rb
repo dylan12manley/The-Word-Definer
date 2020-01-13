@@ -45,8 +45,8 @@ get('/words/:id/edit') do
     # erb(:/words/:id)
   else
   @word = Word.find(params[:id].to_i())
-  erb(:edit_word)
 end
+erb(:edit_word)
 end
 
 patch('/words/:id') do

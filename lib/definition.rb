@@ -33,6 +33,7 @@ class Definition
   end
 
   def self.clear
+    @@total_rows = 0
     @@definitions = {}
   end
 
